@@ -1,29 +1,19 @@
-//
-//  HomeViewController.swift
-//  Preview_UIKit
-//
-//  Created by Everis on 02/03/2021.
-//
-
 import UIKit
+import SwiftUI
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
     }
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+struct HomeViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerPreview {
+            HomeViewController()
+        }
     }
-    */
-
 }

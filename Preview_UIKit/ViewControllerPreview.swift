@@ -1,8 +1,18 @@
-//
-//  ViewControllerPreview.swift
-//  Preview_UIKit
-//
-//  Created by Everis on 02/03/2021.
-//
+import UIKit
+import SwiftUI
 
-import Foundation
+struct ViewControllerPreview: UIViewControllerRepresentable {
+    let viewControllerBuilder: () -> UIViewController
+    
+    init(_ viewControllerBuilder: @escaping () -> UIViewController) {
+        self.viewControllerBuilder = viewControllerBuilder
+    }
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return viewControllerBuilder()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        // Nothing here
+    }
+}

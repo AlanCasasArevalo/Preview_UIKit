@@ -1,8 +1,18 @@
-//
-//  ViewPreview.swift
-//  Preview_UIKit
-//
-//  Created by Everis on 02/03/2021.
-//
+import UIKit
+import SwiftUI
 
-import Foundation
+struct ViewPreview: UIViewRepresentable {
+    let viewBuilder: () -> UIView
+    
+    init(_ viewBuilder: @escaping () -> UIView) {
+        self.viewBuilder = viewBuilder
+    }
+    
+    func makeUIView(context: Context) -> some UIView {
+        viewBuilder()
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        // Nothing here
+    }
+}
